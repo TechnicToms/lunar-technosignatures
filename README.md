@@ -99,34 +99,62 @@ This is an example of how you may give instructions on setting up your project l
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+#### Python Environment
+To run the Python scripts, you need a Python environment that supports at least version 3.12. The scripts were written in Python version 3.12.3. 
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+#### Data Structures
+The following NAC images are also required to carry out the experiments: 
+
+| Landing site: | Image ID:     | Incidence Angle:  | Phase Angle:  | Nominal Resolution:     |
+|---------------|---------------|-------------------|---------------|-------------------------|
+| Apollo 15     | M175252641LR  | 49.39°            | 49.64°        | 0.406 m                 |
+| Apollo 17     | M113758461R   | 55.72°            | 70.19°        | 0.515 m                 |
+
+To load these images into the program, the NAC images are divided into smaller sub-images and stored in their respective data folders. The script follows the structure below:
+<ul>
+  <li>Chosen data root</li>
+  <ul>
+    <li>LRO</li>
+    <ul>
+      <li>NAC</li>
+      <ul>
+        <li>Apollo [VERSION] </li>
+      </ul>
+    </ul>
+  </ul>
+</ul>
+Replace the placeholder [VERSION] with the corresponding number of the landing site, which can be either 15 or 17. Place the tiff image into the corresponding directory and use an image processing program to cut the images in the following way:
+
+- Apollo 15 Landing site
+  | Filename:           | x     | y     | w     | h     |
+  |---------------------|-------|-------|-------|-------|
+  | M175252641_cut1.png | 0     | 0     | 7399  | 14662 |
+  | M175252641_cut2.png | 0     | 14662 | 7399  | 14662 |
+  | M175252641_cut3.png | 0     | 29324 | 7399  | 14662 |
+  | M175252641_cut4.png | 0     | 43986 | 7399  | 14662 |
+  | M175252641_cut5.png | 0     | 58648 | 7399  | 14662 |
+- Apollo 17 Landing site
+  | Filename:           | x     | y     | w     | h     |
+  |---------------------|-------|-------|-------|-------|
+  | M113758461_cut1.png | 0     | 0     | 10118 | 10450 |
+  | M113758461_cut2.png | 0     | 10450 | 10118 | 10450 |
+  | M113758461_cut3.png | 0     | 20900 | 10118 | 10450 |
+  | M113758461_cut4.png | 0     | 31350 | 10118 | 10450 |
+  | M113758461_cut5.png | 0     | 41800 | 10118 | 10450 |
+
+Afterwards, place the ground truths from the `GroundTruths` folder into the appropriate data folder as listed above.
+
+
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Install required packages in your environment of choice:
+   ```sh
+   pip install -r requirements.txt
+   ```
 2. Clone the repo
    ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
-5. Change git remote url to avoid accidental pushes to base project
-   ```sh
-   git remote set-url origin github_username/repo_name
-   git remote -v # confirm the changes
+   git clone https://github.com/technictoms/lunar-technosignatures.git
    ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
