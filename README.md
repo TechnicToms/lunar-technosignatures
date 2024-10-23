@@ -22,7 +22,7 @@
   <a href="https://github.com/TechnicToms/lunar-technosignatures">
     <picture>
         <source media="(prefers-color-scheme: dark)" srcset="images/darkmode-overview.png">
-        <img alt="Overview paper" src="images/lightmode-overview.png">
+        <img alt="Overview paper" src="images/lightmode-overview.png" width="65%">
     </picture>
   </a>
 
