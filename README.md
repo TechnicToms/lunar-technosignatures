@@ -62,6 +62,7 @@
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#results">Results</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
@@ -142,6 +143,88 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
+## Results
+In the following table are the results displayed:
+<table><thead>
+  <tr>
+    <th>Method:</th>
+    <th colspan="6" style="text-align:center;">Metrics:</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td></td>
+    <td>Accuracy:</td>
+    <td>Precision:</td>
+    <td>Recall:</td>
+    <td>AUC:</td>
+    <td>PaTR:</td>
+    <td>AP:</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="6" style="text-align:center;font-weight:bold;">Apollo 15</td>
+  </tr>
+  <tr>
+    <td>AnoViT</td>
+    <td>0.9821</td>
+    <td>0.9226</td>
+    <td>0.9675</td>
+    <td>0.9874</td>
+    <td>0.3396</td>
+    <td>0.8978</td>
+  </tr>
+  <tr>
+    <td>Cut&amp;Paste</td>
+    <td>0.8093</td>
+    <td>0.4360</td>
+    <td>0.7149</td>
+    <td>0.8400</td>
+    <td>0.1575</td>
+    <td>0.3566</td>
+  </tr>
+  <tr>
+    <td>EfficientAD</td>
+    <td>0.9125</td>
+    <td>0.7395</td>
+    <td>0.8765</td>
+    <td>0.9461</td>
+    <td>0.4736</td>
+    <td>0.6855</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="6" style="text-align:center;font-weight:bold;">Apollo 17</td>
+  </tr>
+  <tr>
+    <td>AnoViT</td>
+    <td>0.9091</td>
+    <td>0.6241</td>
+    <td>0.9666</td>
+    <td>0.9329</td>
+    <td>0.3020</td>
+    <td>0.6082</td>
+  </tr>
+  <tr>
+    <td>Cut&amp;Paste</td>
+    <td>0.8615</td>
+    <td>0.5669</td>
+    <td>0.2670</td>
+    <td>0.8489</td>
+    <td>0.1694</td>
+    <td>0.2596</td>
+  </tr>
+  <tr>
+    <td>EfficientAD</td>
+    <td>0.8922</td>
+    <td>0.6818</td>
+    <td>0.9067</td>
+    <td>0.9035</td>
+    <td>0.4399</td>
+    <td>0.6226</td>
+  </tr>
+</tbody></table>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
@@ -157,7 +240,6 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 See the [open issues](https://github.com/TechnicToms/lunar-technosignatures/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- CONTRIBUTING -->
